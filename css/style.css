@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap%27');
+
+html, body{
+
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    font-family: 'montserrat', sans-serif;
+    background: green;
+}
+
+header {
+    text-align: center;
+    /*border: 5px solid grey;*/
+    background: white;
+    width: 100%;
+    height: 10em;
+}
+
+#logo-pos{
+    margin-top: 1.8em;
+    margin-left: 9%;
+    float: left;
+    height: 6em;
+    width: 20em;
+   /* border: 2px solid greenyellow;*/
+}
+
+#logo-png {
+    width: 90px;
+    height: 90px;
+    margin-top: 1%;
+    margin-left: 5%;
+    float: left;
+    /*border: 2px solid red*/
+}
+
+#logo-letras {
+    z-index: -1;
+    color: white;
+    margin-top: 11%;
+    float: left;
+    /*border: 2px solid red;*/
+    display: flex;
+    margin-left: -15%;
+}
+
+#creative {
+    display: none;
+    width: 200px;
+}
+
+#naveg{
+    height: 100%;
+    width: 40%;
+    float: left;
+  /*  border: 2px solid gold;*/
+}
+
+.top-nav ul { 
+    margin-left: 25%;
+    /*border: 2px solid red;*/
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    width: 600px;
+    text-align: center;
+  }
+
+.link{
+    /*border: 2px solid orange;*/
+    display: table-cell; 
+    padding: 15px 0;
+}
+
+.top-nav a{
+    margin-top: 1.5em;
+    font-weight: bolder;
+    color: #33971f;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    /*border: 1px solid rebeccapurple;*/
+}
+
+.top-nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #33971f;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+.top-nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+.port-area{
+    margin-left: 15%;
+    height: 100%;
+    float: left;
+    /*border: 2px solid yellow;*/
+} 
+.be{
+    margin-top: 3.5em;
+    /*border: 2px solid red;*/
+}
+
+.top-content{
+    background: white;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    }
+
+
+    .container-slider{
+        display: block;
+        margin-top: 0;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    } 
+
+
+  
+
+    #slider {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+
+     }
+     #slider input[type=radio] {
+        display: none;
+     }
+     #slider label {
+        cursor:pointer;
+        text-decoration: none;
+     }
+     #slides {
+        position: relative;
+        z-index: 1;
+     }
+     #overflow {
+        width: 100%;
+        overflow: hidden;
+     }
+     #slide1:checked ~ #slides .inner {
+        margin-left: 0;
+     }
+     #slide2:checked ~ #slides .inner {
+        margin-left: -100%;
+     }
+     #slide3:checked ~ #slides .inner {
+        margin-left: -200%;
+     }
+     #slide4:checked ~ #slides .inner {
+        margin-left: -300%;
+     }
+     #slides .inner {
+        transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        width: 400%;
+        line-height: 0;
+        height: 500px;
+     }
+     #slides .slide {
+        width: 25%;
+        float:left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #fff;
+     }
+     #slides .slide_1 {
+        background-image: url(../imagens/Banner\ 2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+     }
+     #slides .slide_2 {
+        background: #003459;
+     }
+     #slides .slide_3 {
+        background: #007EA7;
+     }
+     #slides .slide_4 {
+        background: #00A8E8;
+     }
+     #controls {
+        margin: -170px 0 0 0;
+        width: 100%;
+        height: 50px;
+        z-index: 1;
+        position: relative;
+     }
+     #controls label {
+        transition: opacity 0.2s ease-out;
+        display: none;
+        width: 50px;
+        height: 50px;
+        opacity: .4;
+     }
+     #controls label:hover {
+        opacity: 1;
+     }
+     #slide1:checked ~ #controls label:nth-child(2),
+     #slide2:checked ~ #controls label:nth-child(3),
+     #slide3:checked ~ #controls label:nth-child(4),
+     #slide4:checked ~ #controls label:nth-child(1) {
+        background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+        float:right;
+        margin: 0 1em 0 0;
+        display: block;
+     }
+     #slide1:checked ~ #controls label:nth-last-child(2),
+     #slide2:checked ~ #controls label:nth-last-child(3),
+     #slide3:checked ~ #controls label:nth-last-child(4),
+     #slide4:checked ~ #controls label:nth-last-child(1) {
+        background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+        float:left;
+        margin: 0 0 0 1em;
+        display: block;
+     }
+     #bullets {
+        margin: 8em 0 0;
+        text-align: center;
+     }
+     #bullets label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius:100%;
+        background: #ccc;
+        margin: 0 10px;
+     }
+     #slide1:checked ~ #bullets label:nth-child(1),
+     #slide2:checked ~ #bullets label:nth-child(2),
+     #slide3:checked ~ #bullets label:nth-child(3),
+     #slide4:checked ~ #bullets label:nth-child(4) {
+        background: #444;
+     }
+     #slide1:checked ~ #controls label:nth-child(2),
+        #slide2:checked ~ #controls label:nth-child(3),
+        #slide3:checked ~ #controls label:nth-child(4),
+        #slide4:checked ~ #controls label:nth-child(1),
+        #slide1:checked ~ #controls label:nth-last-child(2),
+        #slide2:checked ~ #controls label:nth-last-child(3),
+        #slide3:checked ~ #controls label:nth-last-child(4),
+        #slide4:checked ~ #controls label:nth-last-child(1) {
+           margin: -6em .5em -6em .5em;
+           
+        }
+        #slides {
+           max-width: calc(100% - 1px);
+           margin: 0 auto;
+
+        }
